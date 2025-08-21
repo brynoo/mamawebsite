@@ -100,6 +100,7 @@
             border: none;
             cursor: pointer;
             padding: 0;
+            z-index: 1001;
         }
         
         .hamburger span {
@@ -141,6 +142,10 @@
             position: relative;
             z-index: 1;
             animation: fadeIn 1.5s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         
         @keyframes fadeIn {
@@ -282,7 +287,9 @@
         
         .ueber-mich-text {
             flex: 2;
-            min-width: 400px;
+            min-width: 300px;
+            max-width: 100%;
+            overflow-wrap: break-word;
         }
         
         /* Systemische Beratung Section */
@@ -691,10 +698,6 @@
         }
 
         @media (max-width: 768px) {
-
-            .hero-logo {
-    max-width: 400px; /* Standardgröße für größere Bildschirme */
-  }
             header {
                 padding: 1rem;
             }
@@ -785,14 +788,15 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 0.9rem;
             }
-
+            
             .hero-logo {
-    max-width: 220px;
-  }
-
+                max-width: 220px;
+            }
+            
+            .ueber-mich-text {
+                min-width: 250px;
+            }
         }
-
-        
 
         /* Animationen */
         @keyframes float {
@@ -803,6 +807,13 @@
         
         .floating {
             animation: float 5s ease-in-out infinite;
+        }
+        
+        /* Neue Media Query für größere Bildschirme */
+        @media (min-width: 769px) {
+            .hero-logo {
+                max-width: 400px;
+            }
         }
     </style>
 </head>
@@ -890,7 +901,7 @@
                 <div class="ueber-mich-text">
                     <p>Ich bin zertifizierte systemische Familienberaterin mit einer Leidenschaft dafür, Familien und Paare auf ihrem Weg zu begleiten. Mein Ansatz ist bedürfnis- und bindungsorientiert sowie ressourcenfokussiert.</p>
                     <p>Jede Familie ist wie ein einzigartiger Garten - manche Pflanzen brauchen mehr Wasser, andere mehr Sonne, aber gemeinsam erschaffen sie etwas Wundervolles. Ich sehe meine Rolle als Gärtnerin, die dabei unterstützt, die optimalen Bedingungen für euer gemeinsames Wachstum zu schaffen.</p>
-                    <p>In meiner Arbeit schaffe ich einen sicheren Raum, in dem jeder gesehen und gehört wird. Ihr seid die Experten eures Lebens - ich begleite euch mit Fachwissen und Empathie dabei, eure eigenen Lösungen zu finden.</p>
+                    <p>In meiner Arbeit schaffe ich einen sicheren Raum, in dem jeder gesehen und gehört wird. Ihr seien die Experten eures Lebens - ich begleite euch mit Fachwissen und Empathie dabei, eure eigenen Lösungen zu finden.</p>
                 </div>
             </div>
         </div>
